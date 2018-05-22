@@ -1,0 +1,40 @@
+// Installation
+npm install --save-dev babel-cli
+
+// Compile Files
+npx babel script.js
+npx babel script.js --out-file script-compiled.js
+npx babel script.js -o script-compiled.js
+npx babel script.js --watch --out-file script-compiled.js
+npx babel script.js -w -o script-compiled.js
+
+// Compile with Source Maps
+npx babel script.js --out-file script-compiled.js --source-maps
+npx babel script.js -o script-compiled.js -s
+npx babel script.js --out-file script-compiled.js --source-maps inline
+npx babel script.js -o script-compiled.js -s inline
+
+// Compile Directories
+npx babel src -d lib
+// Compile the entire src directory and output it to the one concatenated file.
+npx babel src -o script-compiled.js
+
+// Ignore files
+npx babel src --out-dir lib --ignore spec.js,test.js
+npx babel src -d lib --ignore spec.js,test.js
+
+// Copy files
+npx babel src --out-dir lib --copy-files
+
+// Piping Files
+npx babel --out-file script-compiled.js < script.js
+
+// Using Plugins
+npx babel script.js --out-file script-compiled.js --plugins=transform-runtime,transform-es2015-modules-amd
+
+// Using Presets
+npx babel script.js --out-file script-compiled.js --presets=es2015,react
+
+// Ignoring .babelrc
+npx babel --no-babelrc script.js --out-file script-compiled.js --presets=es2015,react
+
