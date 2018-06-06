@@ -2,7 +2,7 @@
   "name": "es5_es6",
   "version": "1.0.0",
   "description": "",
-  "main": "arrow-function.1.js",
+  "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -d build"
