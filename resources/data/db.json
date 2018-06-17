@@ -37,31 +37,5 @@
       "thumbnail": "/images/product/6.jpg"
     }
   ],
-  "orders": [
-    {
-      "orderedDate": "2018-06-17T10:21:22.470Z",
-      "totalPrice": 340,
-      "orders": [
-        {
-          "product": {
-            "id": 4,
-            "productName": "เฟรนฟราย",
-            "unitPrice": "140",
-            "thumbnail": "/images/product/4.jpg"
-          },
-          "quantity": 1
-        },
-        {
-          "product": {
-            "id": 3,
-            "productName": "บิงซู",
-            "unitPrice": "200",
-            "thumbnail": "/images/product/3.jpg"
-          },
-          "quantity": 1
-        }
-      ],
-      "id": 1
-    }
-  ]
+  "orders": []
 }
