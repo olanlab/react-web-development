@@ -1,42 +1,36 @@
 {
   "products": [
     {
-      "id": 1,
       "productId": "P001",
       "productName": "สลัดผัก",
       "unitPrice": "120",
       "thumbnail": "/images/product/1.jpg"
     },
     {
-      "id": 2,
       "productId": "P002",
       "productName": "ไก่ทอด",
       "unitPrice": "90",
       "thumbnail": "/images/product/2.jpg"
     },
     {
-      "id": 3,
       "productId": "P003",
       "productName": "บิงซู",
       "unitPrice": "200",
       "thumbnail": "/images/product/3.jpg"
     },
     {
-      "id": 4,
       "productId": "P004",
       "productName": "เฟรนฟราย",
       "unitPrice": "140",
       "thumbnail": "/images/product/4.jpg"
     },
     {
-      "id": 5,
       "productId": "P005",
       "productName": "เค้ก 3 ชั้น",
       "unitPrice": "200",
       "thumbnail": "/images/product/5.jpg"
     },
     {
-      "id": 6,
       "productId": "P006",
       "productName": "กาแฟ เฮลตี้ฟู้ด",
       "unitPrice": "140",
