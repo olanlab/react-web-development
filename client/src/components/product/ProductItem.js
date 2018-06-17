@@ -13,9 +13,15 @@ class ProductItem extends Component {
                 <img className="img-fluid img-thumbnail" src={thumbnail} />
                 <h5 className="mt-2">{productName}</h5>
                 <p className="title text-right" >{unitPrice} THB</p>
-                <button className="btn btn-block btn-secondary title" onClick={() => this.props.onAddOrder(this.props.product)} >
+                {this.props.onAddOrder &&  <button className="btn btn-block btn-secondary title" onClick={() => this.props.onAddOrder(this.props.product)} >
                     ซื้อ
-                </button>
+                </button>}
+                {this.props.onEditProduct && <button className="btn btn-info  col-5 title" onClick={() => this.props.onEditProduct(this.props.product)} >
+                    แก้ไข
+                </button>}
+                {this.props.onDelProduct &&  <button className="btn btn-danger float-right  col-5 title" onClick={() => this.props.onDelProduct(this.props.product)} >
+                    ลบ
+                </button>}
                 <hr />
             </div>
         )

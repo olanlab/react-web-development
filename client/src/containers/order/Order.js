@@ -38,7 +38,7 @@ class Order extends Component {
                     </h5>
                     <ul>
                         {order.orders && order.orders.map(record => 
-                        <li key={record.product.productId}>{record.product.productName} x {record.quantity} = {record.product.unitPrice * record.quantity}
+                        <li key={record.product.id}>{record.product.productName} x {record.quantity} = {record.product.unitPrice * record.quantity}
                         </li>
                     )}
                     </ul>
