@@ -16,7 +16,6 @@ class Order extends Component {
     }
 
     delOrder(order) {
-        
         axios.delete("http://localhost:3001/orders/" + order.id).then(response => {
             axios.get("http://localhost:3001/orders").then(response => {
                 this.setState({orders: response.data});
