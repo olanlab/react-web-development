@@ -4,9 +4,7 @@ import Footer from "../../components/Footer";
 import ProductList from "../../components/product/ProductList";
 import { withRouter } from 'react-router-dom';
 import { connect } from "react-redux";
-import { productsFetch } from "../../actions/index";
-import axios from "axios";
-
+import { productsFetch, productDelete } from "../../actions/index";
 
 class Product extends Component {
 	constructor(props) {
@@ -24,11 +22,7 @@ class Product extends Component {
 	}
 
 	delProduct(product) {
-		axios.delete("http://localhost:3001/products/" + product.id).then(response => {
-			axios.get("http://localhost:3001/products").then(response => {
-				this.setState({products  : response.data});
-			});
-		});
+		this.props.productDelete(product.id);
 	}
 
 	render() {
@@ -59,4 +53,4 @@ function mapStateToProps({ products }) {
 	return { products };
 }
 
-export default withRouter(connect(mapStateToProps, { productsFetch })(Product));
+export default withRouter(connect(mapStateToProps, { productsFetch, productDelete })(Product));

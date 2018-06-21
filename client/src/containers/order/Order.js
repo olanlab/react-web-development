@@ -2,8 +2,7 @@ import React, { Component } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { connect } from "react-redux";
-import { ordersFetch } from "../../actions/index";
-import axios from "axios";
+import { ordersFetch, orderDelete } from "../../actions/index";
 
 class Order extends Component {
 	constructor(props) {
@@ -16,11 +15,8 @@ class Order extends Component {
     }
 
     delOrder(order) {
-        axios.delete("http://localhost:3001/orders/" + order.id).then(response => {
-            axios.get("http://localhost:3001/orders").then(response => {
-                this.setState({orders: response.data});
-            });
-        });
+        this.props.orderDelete(order.id);
+        this.props.ordersFetch();
     }
     
     showOrders() {
@@ -67,4 +63,4 @@ function mapStateToProps({orders}) {
     return { orders }
 }
 
-export default connect(mapStateToProps, {ordersFetch})(Order);
+export default connect(mapStateToProps, {ordersFetch, orderDelete})(Order);
