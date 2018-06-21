@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
+import { connect } from "react-redux";
+import { ordersFetch } from "../../actions/index";
 import axios from "axios";
 
 class Order extends Component {
@@ -10,9 +12,7 @@ class Order extends Component {
 	}
 
 	componentDidMount() {
-		axios.get("http://localhost:3001/orders").then(response => {
-			this.setState({orders: response.data});
-		});
+		this.props.ordersFetch();
     }
 
     delOrder(order) {
@@ -24,7 +24,7 @@ class Order extends Component {
     }
     
     showOrders() {
-        return this.state.orders && this.state.orders.map(order => {
+        return this.props.orders && this.props.orders.map(order => {
             const date = new Date(order.orderedDate);
             return (
                 <div key={order.id} className="col-md-3">
@@ -63,4 +63,8 @@ class Order extends Component {
 	}
 }
 
-export default Order;
+function mapStateToProps({orders}) {
+    return { orders }
+}
+
+export default connect(mapStateToProps, {ordersFetch})(Order);

@@ -3,21 +3,20 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import ProductList from "../../components/product/ProductList";
 import { withRouter } from 'react-router-dom';
+import { connect } from "react-redux";
+import { productsFetch } from "../../actions/index";
 import axios from "axios";
 
 
 class Product extends Component {
 	constructor(props) {
 		super(props);
-		this.state = { products: null };
 		this.delProduct = this.delProduct.bind(this);
 		this.editProduct = this.editProduct.bind(this);
 	}
 
 	componentDidMount() {
-		axios.get("http://localhost:3001/products").then(response => {
-			this.setState({products  : response.data});
-		});
+		this.props.productsFetch();
 	}
 
 	editProduct(product) {
@@ -45,7 +44,7 @@ class Product extends Component {
 							<button className="btn btn-success title float-right" onClick={() => this.props.history.push('products/add')}>เพิ่ม</button>
 						</div>
 					</div>
-					<ProductList products={this.state.products} 
+					<ProductList products={this.props.products} 
 						onEditProduct={this.editProduct} 
 						onDelProduct={this.delProduct}  
 					/>
@@ -56,4 +55,8 @@ class Product extends Component {
 	}
 }
 
-export default withRouter(Product);
+function mapStateToProps({ products }) {
+	return { products };
+}
+
+export default withRouter(connect(mapStateToProps, { productsFetch })(Product));
