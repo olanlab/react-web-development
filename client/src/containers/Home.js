@@ -18,7 +18,9 @@ class Home extends Component {
 		return (
 			<div>
 				<Header />
+				{this.props.products && Array.isArray(this.props.products) &&
 				<Monitor products={this.props.products} />
+				}
 				<Footer company="Olanlab" email="olan@olanlab.com" />
 			</div>
 		);

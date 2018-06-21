@@ -15,6 +15,7 @@ class Product extends Component {
 
 	componentDidMount() {
 		this.props.productsFetch();
+
 	}
 
 	editProduct(product) {
@@ -38,10 +39,11 @@ class Product extends Component {
 							<button className="btn btn-success title float-right" onClick={() => this.props.history.push('products/add')}>เพิ่ม</button>
 						</div>
 					</div>
+					{this.props.products &&  Array.isArray(this.props.products) &&
 					<ProductList products={this.props.products} 
 						onEditProduct={this.editProduct} 
-						onDelProduct={this.delProduct}  
-					/>
+						onDelProduct={this.delProduct}
+					/>}
 				</div>
 				<Footer />
 			</div>
