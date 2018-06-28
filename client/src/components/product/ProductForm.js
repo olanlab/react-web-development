@@ -6,13 +6,12 @@ import FormField from "../common/FormField";
 
 class ProductForm extends Component {
 	renderFields(formFields) {
-		return formFields.map(({ label, name, type, required, className }) => {
+		return formFields.map(({ label, name, type, required }) => {
 			return (
 				<Field
 					key={name}
 					component={FormField}
 					type={type}
-					className={className}
 					label={label}
 					name={name}
 					required={required}
