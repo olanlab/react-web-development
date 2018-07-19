@@ -47,7 +47,7 @@ function validate(values) {
 	return errors;
 }
 
-function mapStateToProps({ products }) {
+function mapStateToProps({ products}) {
 	if (products && products.id) {
 		return { initialValues: products };
 	} else {
