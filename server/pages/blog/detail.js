@@ -12,15 +12,15 @@ export default class Detail extends Component {
 		const { blog } = this.props;
         const updated_date = new Date(blog.updated_date);
 		return (
-			<Layout>
+			<Layout title={blog.subject}>
 				<div className="container">
-					<h1 className="mt-4 mb-4">{blog.subject}</h1>
+					<h1 className="mt-4 mb-4 title">{blog.subject}</h1>
 					<div className="row">
 						<div className="col-6">
 							<img className="img-fluid" src={blog.thumbnail} />
 						</div>
 						<div className="col-6 ">
-							<div className="text-justify">{blog.detail}</div>
+							<div className="text-justify detail">{blog.detail}</div>
                             <hr />
                             <h5 className="text-success">
                                 เขียนโดย {`${blog.created_by.user.firstname} ${blog.created_by.user.lastname}`}
@@ -31,6 +31,16 @@ export default class Detail extends Component {
 						</div>
 					</div>
 				</div>
+				<style jsx >{`
+					.title {
+						color: darkgreen;
+						text-align: center;
+					}
+					.detail {
+						color: black;
+						word-spacing : 8px;
+					}
+				`}</style>
 			</Layout>
 		);
 	}
