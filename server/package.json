@@ -6,15 +6,20 @@
 	"scripts": {
 		"dev": "next",
 		"build": "next build",
-		"start": "next start"
+		"start": "next start",
+		"dev-express": "node server.js",
+		"start-express": "NODE_ENV=production node server.js"
 	},
 	"keywords": [],
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"@zeit/next-css": "^0.2.0",
+		"@zeit/next-sass": "^0.2.0",
 		"axios": "^0.18.0",
-		"bootstrap": "^4.1.3",
+		"express": "^4.16.3",
 		"next": "^6.1.1",
+		"node-sass": "^4.9.2",
 		"react": "^16.4.1",
 		"react-dom": "^16.4.1"
 	}

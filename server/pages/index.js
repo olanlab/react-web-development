@@ -15,7 +15,7 @@ export default class Index extends Component {
 				<div key={blog.id} className="col-6 mb-4">
 					<img src={blog.thumbnail} className="img-fluid" />
 					<h4 className="mt-3">
-						<Link href={`/blog/detail?id=${blog.id}`}>{blog.subject}</Link>
+						<Link as={`/blog/detail/${blog.id}`} href={`/blog/detail?id=${blog.id}`}>{blog.subject}</Link>
 					</h4>
 					<hr />
 					<p className="text-justify">{blog.intro}</p>

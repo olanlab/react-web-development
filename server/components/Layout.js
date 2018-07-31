@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
+// import "../static/css/style.css";
+import "../static/css/style.scss";
+
 
 export default class Layout extends Component {
 	render() {
@@ -13,7 +16,7 @@ export default class Layout extends Component {
 					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
 					<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" />
 					<link rel="shortcut icon" href="/static/images/logo/logo.png" />
-					<link rel="stylesheet" href="/static/css/style.css" />
+					<link rel="stylesheet" href="/_next/static/style.css" />
 				</Head>
 				<Header />
 				{children}

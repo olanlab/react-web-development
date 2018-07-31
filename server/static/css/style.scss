@@ -1,0 +1,33 @@
+$link-primary : green;
+$link-secondary : darkgreen;
+
+@font-face {
+    font-family: 'Prompt-Regular';
+    src: url('/static/fonts/Prompt-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Prompt-Medium';
+    src: url('/static/fonts/Prompt-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Prompt-Bold';
+    src: url('/static/fonts/Prompt-Bold.ttf');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Prompt-Medium';
+}
+
+.title {
+    font-family: 'Prompt-Regular';
+}
+
+a {
+    color: $link-primary;
+}
+
+a:hover {
+    color: $link-secondary;
+}
