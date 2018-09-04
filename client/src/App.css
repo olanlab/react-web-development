@@ -1,22 +1,28 @@
-@font-face {
-    font-family: 'Prompt-Regular';
-    src: url('/fonts/Prompt-Regular.ttf');
+.App {
+  text-align: center;
 }
 
-@font-face {
-    font-family: 'Prompt-Medium';
-    src: url('/fonts/Prompt-Medium.ttf');
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
-@font-face {
-    font-family: 'Prompt-Bold';
-    src: url('/fonts/Prompt-Bold.ttf');
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Prompt-Medium';
+.App-title {
+  font-size: 1.5em;
 }
 
-.title {
-    font-family: 'Prompt-Regular';
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
