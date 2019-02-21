@@ -1,9 +1,14 @@
-import React, { Component } from "react";
+import React from "react";
+import Count from "./components/Count";
+import Timer from "./components/Timer";
 
-class App extends Component {
-	render() {
-		return <div >React Hooks</div>;
-	}
-}
+const App = () => {
+	return (
+		<div>
+			<Count />
+			<Timer />
+		</div>
+	);
+};
 
 export default App;
