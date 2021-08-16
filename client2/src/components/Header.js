@@ -4,28 +4,43 @@ class Header extends Component {
   constructor(props) {
     super(props);
     this.state = { date: new Date() };
-    
-    console.log('constructor')
+
+    console.log("constructor");
   }
 
-  componentDidMount(){
+  componentDidMount() {
     // console.log('componentDidMount')
     this.timerID = setInterval(() => this.tick(), 1000);
   }
-  componentDidUpdate(){
+  componentDidUpdate() {
     // console.log('componentDidUpdate')
-
   }
-  componentWillUnmount(){
+  componentWillUnmount() {
     // console.log('componentWillUnmount')
     clearInterval(this.timerID);
   }
 
   tick() {
-    this.setState({ date: new Date() });  //เมือมีการเรียก setState จะไปเรียก render ต่อ
+    this.setState({ date: new Date() }); //เมือมีการเรียก setState จะไปเรียก render ต่อ
   }
   render() {
-    return <div>{this.state.date.toLocaleTimeString()} </div>;
+    return (
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-md-8 text-left">
+            <h1 className="text-success">
+              <img src="/images/logo/logo.png" alt="" />
+              เฮลตี้ คาเฟ่
+            </h1>
+          </div>
+          <div className="col-md-4 text-right">
+            <h5 className="text-muted mt-4">
+              {this.state.date.toLocaleTimeString()}
+            </h5>
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
