@@ -1,8 +1,10 @@
 import './App.css'
 import React, { Component } from 'react';
-import Footer from "./components/Footer";
 import Header from "./components/Header";
+import Monitor from "./components/monitor/Monitor"
+import Footer from "./components/Footer";
 import ProductItem from "./components/product/ProductItem";
+
 
 class App extends Component {
 
@@ -28,9 +30,12 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <ProductItem productName="IPhone X" unitPrice="40500" />
+        <Monitor products={this.props.products} />
+
+
+        {/* <ProductItem productName="IPhone X" unitPrice="40500" />
         <ProductItem productName="iPad Pro 10.5" unitPrice="30500" />
-        <ProductItem productName="iPad Mini 4 " unitPrice="19500" />
+        <ProductItem productName="iPad Mini 4 " unitPrice="19500" /> */}
         <Footer company="Olanlab" email="olan@olanlab.com" />
       </div>
     );

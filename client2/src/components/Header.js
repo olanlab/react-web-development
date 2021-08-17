@@ -31,12 +31,8 @@ class Header extends Component {
       <div className="container-fluid">
         <div className="row">
           <div className="col-md-8 text-left">
-            <h1 className="text-success">
-              <img
-                style={{ height: 50, marginTop: 70 }}
-                src="/images/logo/logo.png"
-                alt=""
-              />
+            <h1 className="text-success" style={{ height: 70 }}>
+              <img src="/images/logo/logo.png" alt="" />
               เฮลตี้ คาเฟ่
             </h1>
           </div>
