@@ -30,7 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Monitor products={this.props.products} />
+        <Monitor products={this.state.products} />
 
 
         {/* <ProductItem productName="IPhone X" unitPrice="40500" />
